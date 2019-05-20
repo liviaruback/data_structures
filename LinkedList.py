@@ -57,6 +57,16 @@ class LinkedListNode:
             previous = current
             current = nextNode
         self.head = previous
+
+    # print the Linked List in reverse order
+    def printReserveOrder(self):
+        current = self.head
+        nodes = []
+        while current:
+            nodes.append(str(current.value))
+            current = current.nextNode
+        
+        print(','.join(nodes[::-1]))
         
 # creating a Singly Linked List
 
@@ -73,5 +83,9 @@ lst.append("items")
 
 # reversing the list in place
 lst.reverse()
+
+# printing the reverse Linked List
+lst.printReserveOrder()
+
 
 lst
